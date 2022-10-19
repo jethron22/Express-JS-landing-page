@@ -5,7 +5,6 @@ const port = 2007
 
 app.get('/', (req, res) => {
 
-    console.log(__dirname)
 
     res.sendFile(__dirname + "/vues/accueil.html")
 
@@ -14,7 +13,6 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req, res) => {
 
-    console.log(__dirname)
 
     res.sendFile(__dirname + "/vues/about.html")
 
@@ -24,16 +22,14 @@ app.get('/about', (req, res) => {
 
 app.get('/Mentors', (req, res) => {
 
-    console.log(__dirname)
 
-    res.sendFile(__dirname + "/vues/Mentors.html")
+    res.sendFile(__dirname + "/vues/mentors.html")
 
 
 })
 
 app.get('/adresse', (req, res) => {
-
-    console.log(__dirname)
+ 
 
     res.sendFile(__dirname + "/vues/adresse.html")
 
@@ -42,7 +38,6 @@ app.get('/adresse', (req, res) => {
 
 app.get('/contact', (req, res) => {
 
-    console.log(__dirname)
 
     res.sendFile(__dirname + "/vues/contact.html")
 
