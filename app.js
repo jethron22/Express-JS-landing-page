@@ -1,19 +1,25 @@
 const express = require("express")
 const app = express()
-const port = 2100
+const port = 2101
+
+// set the view engine to pug
+
+app.set('view engine', 'pug');
+app.set('views', 'vues');
 
 
 app.get('/', (req, res) => {
 
 
-    res.sendFile(__dirname + "/vues/accueil.html")
+    // res.sendFile(__dirname + "/vues/accueil.pug")
+    res.render('accueil')
 
 })
 
 app.get('/about', (req, res) => {
 
 
-    res.sendFile(__dirname + "/vues/about.html")
+    res.render('about')
 
 
 })
@@ -22,7 +28,7 @@ app.get('/about', (req, res) => {
 app.get('/mentors', (req, res) => {
 
 
-    res.sendFile(__dirname + "/vues/mentors.html")
+    res.render('mentors')
 
 
 })
@@ -30,7 +36,7 @@ app.get('/mentors', (req, res) => {
 app.get('/adresse', (req, res) => {
  
 
-    res.sendFile(__dirname + "/vues/adresse.html")
+    res.render('adresse')
 
 
 })
@@ -38,7 +44,7 @@ app.get('/adresse', (req, res) => {
 app.get('/contact', (req, res) => {
 
 
-    res.sendFile(__dirname + "/vues/contact.html")
+    res.render('contact')
 
 
 })
