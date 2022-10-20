@@ -1,13 +1,12 @@
 const express = require("express")
 const app = express()
-const port = 2007
+const port = 2100
 
 
 app.get('/', (req, res) => {
 
 
     res.sendFile(__dirname + "/vues/accueil.html")
-
 
 })
 
@@ -20,7 +19,7 @@ app.get('/about', (req, res) => {
 })
 
 
-app.get('/Mentors', (req, res) => {
+app.get('/mentors', (req, res) => {
 
 
     res.sendFile(__dirname + "/vues/mentors.html")
